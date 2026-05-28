@@ -9,17 +9,16 @@ export function HeroSection() {
   const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
   // Boat moves left as you scroll
-  const boatX = useTransform(scrollYProgress, [0, 0.4], [0, -1200]);
+  const boatX = useTransform(scrollYProgress, [0, 0.5], [0, -400]);
 
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Ocean Background Image */}
-      <div className="absolute inset-0" style={{ height: '100%', width: '100%' }}>
+      <div className="absolute inset-0">
         <img
           src={oceanBg}
           alt="Ocean background"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 40%' }}
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
@@ -85,7 +84,7 @@ export function HeroSection() {
           bottom: '5%',
           left: '50%',
           x: useTransform(boatX, (value) => `calc(-50% + ${value}px)`),
-          width: 'clamp(390px, 28vw, 910px)',
+          width: 'clamp(300px, 25vw, 700px)',
         }}
       >
         <motion.img
@@ -105,11 +104,6 @@ export function HeroSection() {
           }}
         />
       </motion.div>
-
-      {/* Bottom transition overlay */}
-      <div className="absolute bottom-0 left-0 right-0 z-30 h-24" style={{
-        background: 'linear-gradient(to top, #F9F8F4 0%, #F9F8F4 20%, transparent 100%)'
-      }}></div>
     </div>
   );
 }
