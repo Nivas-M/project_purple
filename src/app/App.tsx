@@ -3,23 +3,27 @@ import { RegisterTrailSection } from './components/RegisterTrailSection';
 import { StatsSection } from './components/StatsSection';
 import { OpportunitySection } from './components/OpportunitySection';
 import { OrganizersSection } from './components/OrganizersSection';
-import { SponsorshipSection } from './components/SponsorshipSection';
 import { ScheduleSection } from './components/ScheduleSection';
-import { ContactSection } from './components/ContactSection';
+import { LocationSection } from './components/LocationSection';
 import { Footer } from './components/Footer';
+import { AnchorMenu } from './components/AnchorMenu';
 
 export default function App() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F9F8F4' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#fbf5ed' }}>
       <HeroSection />
-      <RegisterTrailSection />
+      <div id="register">
+        <RegisterTrailSection />
+      </div>
       <StatsSection />
       <OpportunitySection />
       <OrganizersSection />
-      <SponsorshipSection />
       <ScheduleSection />
-      <ContactSection />
+      <LocationSection />
       <Footer />
+
+      {/* Fixed Anchor Menu */}
+      <AnchorMenu />
     </div>
   );
 }

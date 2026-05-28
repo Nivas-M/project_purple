@@ -27,13 +27,13 @@ export function HeroSection() {
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-8">
 
         {/* Content wrapper for CIH and Title */}
-        <div className="flex flex-col items-center gap-8" style={{ position: 'relative', top: '-25vh' }}>
+        <div className="w-full flex flex-col items-center gap-6" style={{ position: 'relative', top: '-25vh' }}>
           {/* CIH 2026 Badge */}
           <motion.div style={{ opacity: textOpacity }}>
             <div className="border-2 px-4 py-1" style={{ borderColor: 'var(--primary-orange)' }}>
               <p style={{
                 fontFamily: "'Korsen', sans-serif",
-                fontSize: 'clamp(14px, 1.5vw, 20px)',
+                fontSize: 'clamp(12px, 1.3vw, 17px)',
                 fontWeight: 700,
                 color: 'var(--primary-orange)',
                 letterSpacing: '2px'
@@ -45,10 +45,10 @@ export function HeroSection() {
 
           {/* Tagline */}
           <motion.p
-            className="text-center"
+            className="text-center px-4"
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(11px, 1.3vw, 18px)',
+              fontSize: 'clamp(10px, 1.1vw, 15px)',
               color: 'var(--primary-orange)',
               letterSpacing: '2px',
               opacity: textOpacity,
@@ -60,32 +60,30 @@ export function HeroSection() {
 
           {/* Main Heading */}
           <motion.h1
-            className="text-center max-w-5xl"
+            className="w-full max-w-4xl mx-auto text-center text-[18px] sm:text-[34px] md:text-[50px] lg:text-[68px] xl:text-[76px] uppercase font-bold px-4"
             style={{
               fontFamily: "'Korsen', sans-serif",
-              fontSize: 'clamp(40px, 5vw, 90px)',
               color: 'var(--primary-orange)',
               lineHeight: 1.15,
+              letterSpacing: 0,
               opacity: textOpacity,
-              textTransform: 'uppercase',
-              letterSpacing: '6px',
-              fontWeight: 700,
-              textShadow: '3px 3px 12px rgba(0,0,0,0.15)'
+              textShadow: '3px 3px 12px rgba(0,0,0,0.15)',
             }}
           >
-            COASTAL INNOVATION<br />HACKATHON
+            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>COASTAL INNOVATION</span>
+            <span style={{ display: 'block' }}>HACKATHON</span>
           </motion.h1>
         </div>
       </div>
 
       {/* Animated Boat */}
       <motion.div
-        className="absolute z-20"
+        className="hidden md:block absolute z-20"
         style={{
           bottom: '5%',
           left: '50%',
           x: useTransform(boatX, (value) => `calc(-50% + ${value}px)`),
-          width: 'clamp(390px, 28vw, 910px)',
+          width: 'clamp(280px, 28vw, 910px)',
         }}
       >
         <motion.img
@@ -108,7 +106,7 @@ export function HeroSection() {
 
       {/* Bottom transition overlay */}
       <div className="absolute bottom-0 left-0 right-0 z-30 h-24" style={{
-        background: 'linear-gradient(to top, #F9F8F4 0%, #F9F8F4 20%, transparent 100%)'
+        background: 'linear-gradient(to top, #fbf5ed 0%, #fbf5ed 20%, transparent 100%)'
       }}></div>
     </div>
   );

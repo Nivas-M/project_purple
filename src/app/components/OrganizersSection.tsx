@@ -23,7 +23,7 @@ export function OrganizersSection() {
   ];
 
   return (
-    <section id="organizers" className="py-32 bg-white border-y border-black/5">
+    <section id="organizers" className="pt-32 pb-16 border-y border-stone-200" style={{ backgroundColor: '#fbf5ed' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-display font-bold mb-4 tracking-tight" style={{ color: '#1C1917' }}>
@@ -42,8 +42,8 @@ export function OrganizersSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="p-8 rounded-2xl border border-black/5 hover:border-[#EA580C]/30 transition-colors"
-              style={{ backgroundColor: 'rgba(249, 248, 244, 0.3)' }}
+              className="p-8 rounded-2xl border border-stone-200 hover:border-[#E66B36]/30 hover:shadow-[0_8px_30px_rgba(29,111,120,0.06)] shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300"
+              style={{ backgroundColor: '#ffffff' }}
             >
               {org.badge && (
                 <div className="inline-block px-2 py-1 rounded mb-3 text-xs font-bold uppercase tracking-wider" style={{ backgroundColor: 'rgba(14, 116, 144, 0.1)', color: '#0E7490' }}>

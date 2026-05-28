@@ -95,6 +95,7 @@
 }
 
 @theme inline {
+  --font-display: var(--font-heading);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -152,6 +153,7 @@
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: smooth;
   }
 
   h1 {
